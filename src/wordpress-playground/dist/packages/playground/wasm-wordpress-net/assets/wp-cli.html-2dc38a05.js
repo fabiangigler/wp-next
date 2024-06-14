@@ -1,0 +1,1 @@
+import"./modulepreload-polyfill-3cfb730f.js";import{_ as t}from"./preload-helper-cf010ec4.js";const{runDemo:o}=await t(()=>import("./terminal-878c090b.js"),["assets/terminal-878c090b.js","assets/config-b1afd602.js","assets/client-def1a369.js","assets/terminal-249bb152.css"]);o(document.getElementById("wp"));

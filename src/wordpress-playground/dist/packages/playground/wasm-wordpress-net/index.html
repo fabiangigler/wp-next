@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>WordPress Playground</title>
+		<base href="/" />
+		<meta
+			property="og:image"
+			content="https://playground.wordpress.net/ogimage.png"
+		/>
+		<meta property="og:title" content="WordPress Playground" />
+		<meta
+			property="og:description"
+			content="WordPress running in your browser for learning, testing, and developing with WordPress!"
+		/>
+		<meta property="og:url" content="https://playground.wordpress.net/" />
+		<meta
+			name="description"
+			content="WordPress running in your browser for learning, testing, and developing with WordPress!"
+		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		
+		<link rel="manifest" href="data:application/json;base64,ewoJInRoZW1lX2NvbG9yIjogIiNmZmZmZmYiLAoJImJhY2tncm91bmRfY29sb3IiOiAiI2ZmZmZmZiIsCgkiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwKCSJzY29wZSI6ICIvIiwKCSJzdGFydF91cmwiOiAiLyIsCgkic2hvcnRfbmFtZSI6ICJXb3JkUHJlc3MgUGxheWdyb3VuZCIsCgkiZGVzY3JpcHRpb24iOiAiV29yZFByZXNzIFBsYXlncm91bmQiLAoJIm5hbWUiOiAiV29yZFByZXNzIFBsYXlncm91bmQiLAoJImljb25zIjogWwoJCXsKCQkJInNyYyI6ICIvd2Vic2l0ZS1zZXJ2ZXIvbG9nby0xOTIucG5nIiwKCQkJInNpemVzIjogIjE5MngxOTIiLAoJCQkidHlwZSI6ICJpbWFnZS9wbmciCgkJfSwKCQl7CgkJCSJzcmMiOiAiL3dlYnNpdGUtc2VydmVyL2xvZ28tMjU2LnBuZyIsCgkJCSJzaXplcyI6ICIyNTZ4MjU2IiwKCQkJInR5cGUiOiAiaW1hZ2UvcG5nIgoJCX0sCgkJewoJCQkic3JjIjogIi93ZWJzaXRlLXNlcnZlci9sb2dvLTM4NC5wbmciLAoJCQkic2l6ZXMiOiAiMzg0eDM4NCIsCgkJCSJ0eXBlIjogImltYWdlL3BuZyIKCQl9LAoJCXsKCQkJInNyYyI6ICIvd2Vic2l0ZS1zZXJ2ZXIvbG9nby01MTIucG5nIiwKCQkJInNpemVzIjogIjUxMng1MTIiLAoJCQkidHlwZSI6ICJpbWFnZS9wbmciCgkJfQoJXQp9Cg==" />
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-SVTNFCP8T7"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+			gtag('config', 'G-SVTNFCP8T7');
+		</script>
+		<script type="module" crossorigin src="/assets/index-f8096c07.js"></script>
+		<link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-3cfb730f.js">
+		<link rel="modulepreload" crossorigin href="/assets/preload-helper-cf010ec4.js">
+		<link rel="stylesheet" href="/assets/index-d60708af.css">
+	</head>
+	<body>
+		<div id="root">
+			<script>
+				const query = new URLSearchParams(window.location.search);
+				const shouldLazyLoadPlayground =
+					query.has('lazy') ||
+					// Initial API used "start_button" - this preserves compatibility.
+					'1' === query.get('start_button');
+
+				if (shouldLazyLoadPlayground) {
+					const query = new URLSearchParams(window.location.search);
+					query.delete('lazy');
+					query.delete('start_button');
+					const nonLazyUrl = new URL(window.location);
+					nonLazyUrl.search = query.toString();
+
+					const initiator = document.createElement('a');
+					initiator.innerText = 'Run Playground';
+					initiator.setAttribute('id', 'lazy-load-initiator');
+					initiator.setAttribute('href', nonLazyUrl);
+
+					const root = document.getElementById('root');
+					root.classList.add('lazy-loading');
+					root.appendChild(initiator);
+				}
+			</script>
+		</div>
+		
+	</body>
+</html>

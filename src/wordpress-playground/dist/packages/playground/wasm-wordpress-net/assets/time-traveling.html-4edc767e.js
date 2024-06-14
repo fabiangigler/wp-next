@@ -1,0 +1,1 @@
+import"./modulepreload-polyfill-3cfb730f.js";import{_ as t}from"./preload-helper-cf010ec4.js";const{restartDemo:o}=await t(()=>import("./time-traveling-aa18ca4e.js"),["assets/time-traveling-aa18ca4e.js","assets/client-def1a369.js","assets/config-b1afd602.js","assets/setup-playground-sync-ceaa552e.js"]);o();
